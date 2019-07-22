@@ -18,7 +18,7 @@ function runit()
     output.innerHTML = '';
 	Sk.pre = "output";
     Sk.configure({output:outf, read:builtinRead});
-	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
     var myPromise = Sk.misceval.asyncToPromise(function() {
        return Sk.importMainWithBody("<stdin>", false, prog, true);
 	});
