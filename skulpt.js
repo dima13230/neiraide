@@ -23,8 +23,9 @@ function builtinRead(x) {
 				return Sk.misceval.promiseToSuspension(
 					fetch(exLibs[x.replace("./", "")]["path"])
 						.then(
-						function(r) { return r.text() }
+						function(r) { return r.text(); }
 						)
+						.catch( console.log )
 				);
 			}
 		}
