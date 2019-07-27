@@ -3,3 +3,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   mode: "python"
 });
 editor.setSize(null, 400);
+
+function new_f() {
+	editor.setValue("");
+}

@@ -1,41 +1,48 @@
 <!doctype html>
-
-<title>Neira IDE</title>
 <meta charset="utf-8"/>
-<link rel=stylesheet href="docs.css">
 
-<link rel="stylesheet" href="lib/codemirror.css">
-<link rel="stylesheet" href="addon/dialog/dialog.css">
-<link rel="stylesheet" href="addon/hint/show-hint.css">
-<script src="lib/codemirror.js"></script>
-<script src="mode/python/python.js"></script>
-<script src="addon/dialog/dialog.js"></script>
-<script src="addon/hint/show-hint.js"></script>
+<head>
+	<title>Neira IDE</title>
+	<link rel=stylesheet href="docs.css">
 
-<script src="skulpt/skulpt.min.js"></script> 
-<script src="skulpt/skulpt-stdlib.js"></script> 
+	<link rel="stylesheet" href="lib/codemirror.css">
+	<link rel="stylesheet" href="addon/dialog/dialog.css">
+	<link rel="stylesheet" href="addon/hint/show-hint.css">
+	
+	<script src="lib/jquery.js"></script>
+	
+	<script src="lib/codemirror.js"></script>
+	<script src="mode/python/python.js"></script>
+	<script src="addon/dialog/dialog.js"></script>
+	<script src="addon/hint/show-hint.js"></script>
 
-<style>
+	<script src="skulpt/dist/skulpt.min.js"></script> 
+	<script src="skulpt/dist/skulpt-stdlib.js"></script> 
+
+	<script src="lib/require.js"></script> 
+
+	<style>
       .CodeMirror {border: 1px solid #ddd;}
-</style>
-<script src="skulpt/skulpt.min.js"></script> 
-<script src="skulpt/skulpt-stdlib.js"></script> 
+	</style>
+</head>
 
-<div id=nav>
-  <ul>
-    <li><a href="../index.php">Home</a>
-    <li><a onclick="runit()">Run</a>
-  </ul>
-</div>
+<body>
+	<div id=nav>
+		<ul>
+			<li><a onclick="new_f()">New</a>
+			<li><a onclick="runit()">Run</a>
+		</ul>
+	</div>
 
-<article>
-<form><textarea id="code" name="code">print("Hello, world!")
-</textarea></form>
+	<article>
+	<form><textarea id="code" name="code">print("Hello, world!")
+	</textarea></form>
 
-<pre id="output"></pre>
-<div id="canvas" height="500" width="500"></div>
-<script src="skulpt.js"></script>
-
-<script src="uicode.js"></script>
-
-</article>
+	<div id="canvas" height="500" width="500"></div>
+	<pre id="output"></pre>
+	
+	<script src="skulpt.js"></script>
+	
+	<script src="uicode.js"></script>
+	</article>
+</body>

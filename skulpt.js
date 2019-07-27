@@ -1,3 +1,12 @@
+// Load external libraries
+var exLibsOk = false;
+
+let exLibs;
+$.getJSON("./exLib.json", function(json) {
+	exLibs = json;
+	exLibsOk = true;
+});
+
 function outf(text)
 {
     var output = document.getElementById("output");
@@ -7,7 +16,18 @@ function outf(text)
 
 function builtinRead(x) {
     if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-            throw "File not found: '" + x + "'";
+	{
+		if(exLibsOk) {
+			if (x.replace("./", "") in exLibs) {
+				console.log("Seeking for " + x.replace("./", "") + " in external libs list");
+				return Sk.misceval.promiseToSuspension(
+					fetch(exLibs[x.replace("./", "")]["path"])
+						.then(r => r.text())
+				);
+			}
+		}
+	}
+	
     return Sk.builtinFiles["files"][x];
 }
 
@@ -17,8 +37,11 @@ function runit()
     var output = document.getElementById("output");
     output.innerHTML = '';
 	Sk.pre = "output";
+	
     Sk.configure({output:outf, read:builtinRead});
+	
 	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+	
     var myPromise = Sk.misceval.asyncToPromise(function() {
        return Sk.importMainWithBody("<stdin>", false, prog, true);
 	});
