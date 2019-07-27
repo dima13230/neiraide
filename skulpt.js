@@ -22,7 +22,9 @@ function builtinRead(x) {
 				console.log("Seeking for " + x.replace("./", "") + " in external libs list");
 				return Sk.misceval.promiseToSuspension(
 					fetch(exLibs[x.replace("./", "")]["path"])
-						.then(r => r.text())
+						.then(
+						function(r) { return r.text() }
+						)
 				);
 			}
 		}
