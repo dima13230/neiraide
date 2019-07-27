@@ -1,7 +1,7 @@
 // Load external libraries
 var exLibsOk = false;
 
-let exLibs;
+var exLibs;
 $.getJSON("./exLib.json", function(json) {
 	exLibs = json;
 	exLibsOk = true;
