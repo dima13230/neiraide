@@ -13,12 +13,12 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   lineNumbers: true,
   mode: "python"
 });
-editor.setSize(null, 500);
+editor.setSize(null, 400);
 
 //// Mobile adjust \\\\
 
 if (detectmob()) {
-	editor.getWrapperElement().style["font-size"] = 20+"px";
+	editor.getWrapperElement().style["font-size"] = 18+"px";
 }
 
 
