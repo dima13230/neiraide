@@ -1,7 +1,4 @@
-var output = document.getElementById("output");
-
 function detectmob() {
-	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
      return true;
    } else {
