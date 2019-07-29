@@ -14,7 +14,9 @@ editor.setSize(null, 400);
 
 //// Mobile adjust \\\\
 
+var output = document.getElementById("output");
 if (detectmob()) {
+	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
 	editor.getWrapperElement().style["font-size"] = 20+"px";
 }
 
