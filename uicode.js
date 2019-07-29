@@ -1,3 +1,5 @@
+var output = document.getElementById("output");
+
 function detectmob() {
 	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
@@ -15,7 +17,6 @@ editor.setSize(null, 400);
 
 //// Mobile adjust \\\\
 
-var output = document.getElementById("output");
 if (detectmob()) {
 	editor.getWrapperElement().style["font-size"] = 20+"px";
 }
