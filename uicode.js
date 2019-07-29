@@ -1,4 +1,5 @@
 function detectmob() {
+	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
      return true;
    } else {
@@ -16,7 +17,6 @@ editor.setSize(null, 400);
 
 var output = document.getElementById("output");
 if (detectmob()) {
-	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
 	editor.getWrapperElement().style["font-size"] = 20+"px";
 }
 
