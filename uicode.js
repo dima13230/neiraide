@@ -43,6 +43,6 @@ navtoggle.click(function() {
 });
 
 var hammertime = new Hammer(document.getElementById("nav-toggle"));
-hammertime.on('swiperight', function(ev) {
+hammertime.on('swipe', function(ev) {
 	togglenav();
 });
