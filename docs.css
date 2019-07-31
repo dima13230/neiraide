@@ -282,7 +282,7 @@ strong {
 	  font-size: 23px;
   }
   .nav-toggle {
-    background-color: black;
+    background-color: transparent;
     z-index: 5;
     width: 1.6em;
     height: 100%;
