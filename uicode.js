@@ -1,7 +1,6 @@
 var output = document.getElementById("output");
 
 function detectmob() {
-	output.innerHTML = window.innerWidth + "x" + window.innerHeight;
    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
      return true;
    } else {
@@ -15,13 +14,35 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 });
 editor.setSize(null, 400);
 
-//// Mobile adjust \\\\
-
-if (detectmob()) {
-	editor.getWrapperElement().style["font-size"] = 18+"px";
-}
-
 
 function new_f() {
 	editor.setValue("");
 }
+
+var navtoggle = $('.nav-toggle');
+var nav = $('#nav');
+
+function togglenav() {
+  nav.toggle(450, function() {
+    if(nav.css('display') == 'block') {
+      navtoggle.css('margin-left', '180px');
+      navtoggle.css('width', '100%');
+    }
+    else {
+      navtoggle.css('margin-left', '0');
+      navtoggle.css('width', '1.6em');
+    }
+  });
+}
+
+navtoggle.click(function() {
+  nav.hide(450, function() {
+    navtoggle.css('margin-left', '0');
+    navtoggle.css('width', '1.6em');
+  });
+});
+
+var hammertime = new Hammer(document.getElementById("nav-toggle"));
+hammertime.on('swiperight', function(ev) {
+	togglenav();
+});

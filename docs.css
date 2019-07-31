@@ -48,8 +48,7 @@ em {
 .CodeMirror {border: 1px solid #ddd;}
 
 article {
-  margin-left: 120px;
-  border-left: 2px solid #88ade2;
+  margin-left: 180px;
   background: white;
   z-index: 2;
   position: relative;
@@ -66,36 +65,30 @@ article {
   box-sizing: -moz-border-box;
   box-sizing: border-box;
   overflow-y: auto;
-  left: 0; right: none;
-  width: 120px;
-  text-align: right;
+  left: 0;
+  height: 100%;
+  width: 180px;
+  text-align: left;
   z-index: 3;
-}
 
-//@media screen and (min-width: 1000px) {
-  article {
-    margin: 0 auto;
-  }
-  #nav {
-    right: 50%;
-    width: auto;
-    border-right: 349px solid transparent;
-  }
-}
-
-#nav ul {
-  display: block;
-  margin: 0; padding: 0;
-  margin-bottom: 32px;
+  background: #f8f8f8;
+  border-right: 2px solid #88ade2;
 }
 
 #nav a {
   text-decoration: none;
 }
 
+#nav .btn:hover {
+  text-decoration: none;
+  background-color: rgb(36, 36, 36);
+  color: #ffffff;
+}
+
 #nav li {
   display: block;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 #nav li ul {
@@ -113,9 +106,16 @@ article {
   display: inline-block;
 }
 
+#nav ul {
+  display: block;
+  margin: 0; padding: 0;
+  margin-bottom: 32px;
+}
+
 #nav ul a {
   color: black;
-  padding: 0 7px 1px 11px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 #nav ul a.active, #nav ul a:hover {
@@ -206,17 +206,6 @@ section.first {
   text-align: right;
 }
 
-@media screen and (max-width: 800px) {
-  .actions {
-    padding-top: 120px;
-  }
-  .actionsleft, .actionsright {
-    float: none;
-    text-align: left;
-    margin-bottom: 1em;
-  }
-}
-
 th {
   text-decoration: underline;
   font-weight: normal;
@@ -261,5 +250,52 @@ strong {
 }
 
 .field {
-  border: 1px solid #A21313;
+  border: 1px solid rgb(40, 19, 162);
+}
+
+.btn {
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(26, 26, 26);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .actions {
+    padding-top: 120px;
+  }
+  .actionsleft, .actionsright {
+    float: none;
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  
+  .CodeMirror {
+	  font-size: 23px;
+  }
+  .nav-toggle {
+    background-color: black;
+    z-index: 5;
+    width: 1.6em;
+    height: 100%;
+    position: fixed;
+    display: inherit;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  article {
+    margin-left: 0;
+    border-left: 0;
+  }
 }
