@@ -199,11 +199,16 @@ body{
 #drive-info{
 	position: fixed;
     height:90px;
-    width: fit-content;
-    z-index:9999;
-    padding:5px;
-    text-align: center;
+    width: 160px;
+    z-index:5;
+    text-align: left;
+    font-size: 17px;
+    padding-left: 10px;
     bottom: 2em;
+}
+
+#drive-info .btn{
+    text-align: center;
 }
 /************* END User Drive Information **************/
 
