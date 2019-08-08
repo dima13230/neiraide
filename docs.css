@@ -48,7 +48,7 @@ em {
 .CodeMirror {border: 1px solid #ddd;}
 
 article {
-  margin-left: 180px;
+  margin-left: 210px;
   background: white;
   z-index: 2;
   position: relative;
@@ -67,7 +67,7 @@ article {
   overflow-y: auto;
   left: 0;
   height: 100%;
-  width: 180px;
+  width: 210px;
   text-align: left;
   z-index: 3;
 

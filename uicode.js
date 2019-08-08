@@ -25,7 +25,7 @@ var nav = $('#nav');
 function togglenav() {
   nav.toggle(450, function() {
     if(nav.css('display') == 'block') {
-      navtoggle.css('margin-left', '180px');
+      navtoggle.css('margin-left', '210px');
       navtoggle.css('width', '100%');
     }
     else {

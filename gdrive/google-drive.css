@@ -51,11 +51,9 @@ body{
     filter: alpha(opacity=35);
 }
 
-#drive-box{
-    padding:10px;
-    margin:10px;   
+#drive-box{  
     border:solid 1px #ccc;
-    width:98%;
+    width: 150px;
     box-sizing: border-box;
     display:none;
     position:relative;
