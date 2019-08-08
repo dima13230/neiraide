@@ -556,3 +556,22 @@ function showErrorMessage(errorMessage) {
 }
 
 /******************** END NOTIFICATION ********************/
+
+/******************** START UTIL **************************/
+function downloadFile(file, callback) {
+	if (file.downloadUrl) {
+	  var accessToken = gapi.auth.getToken().access_token;
+	  var xhr = new XMLHttpRequest();
+	  xhr.open('GET', file.downloadUrl);
+	  xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+	  xhr.onload = function() {
+		callback(xhr.responseText);
+	  };
+	  xhr.onerror = function() {
+		callback(null);
+	  };
+	  xhr.send();
+	} else {
+	  callback(null);
+	}
+  }

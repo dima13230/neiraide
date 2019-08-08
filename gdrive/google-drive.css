@@ -198,13 +198,13 @@ body{
 
 #drive-info{
 	position: fixed;
-    height:90px;
+    height: fit-content;
     width: 160px;
     z-index:5;
     text-align: left;
     font-size: 17px;
     padding-left: 10px;
-    bottom: 2em;
+    bottom: 0;
 }
 
 #drive-info .btn{
