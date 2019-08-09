@@ -284,15 +284,17 @@ function buildFiles(){
 
             fText += "<div class='" + DRIVE_FILES[i].fileType + "-box'>";
 			if (DRIVE_FILES[i].fileType != "file") {
-				//fText += "<div class='folder-icon' data-level='" + DRIVE_FILES[i].level + "' data-parent='" + DRIVE_FILES[i].parentID + "' data-size='" + DRIVE_FILES[i].fileSize + "' data-id='" + DRIVE_FILES[i].id + "' title='" + textTitle + "' data-name='" + DRIVE_FILES[i].title + "' data-has-permission='" +DRIVE_FILES[i].hasPermission + "'><div class='image-preview'><img src='images/folder.png'/></div></div>";
+				fText += "<div class='folder-icon' data-level='" + DRIVE_FILES[i].level + "' data-parent='" + DRIVE_FILES[i].parentID + "' data-size='" + DRIVE_FILES[i].fileSize + "' data-id='" + DRIVE_FILES[i].id + "' title='" + textTitle + "' data-name='" + DRIVE_FILES[i].title + "' data-has-permission='" +DRIVE_FILES[i].hasPermission + "'><div class='image-preview'><img src='images/folder.png'/></div></div>";
 			} else {
 				if (DRIVE_FILES[i].thumbnailLink) {
 					//fText += "<div class='image-icon'><div class='image-preview'><a href='" + DRIVE_FILES[i].thumbnailLink.replace("s220", "s800") + "' data-lightbox='image-" + i + "'><img src='" + DRIVE_FILES[i].thumbnailLink + "'/></a></div></div>";
+					fText += "<div class='folder-title'>" + DRIVE_FILES[i].title + "</div>";
 				}else {
+					fText += "<div class='file-title'>" + DRIVE_FILES[i].title + "</div>";
 					//fText += "<div class='file-icon'><div class='image-preview'><img src='images/" + DRIVE_FILES[i].fileExtension + "-icon.png" + "'/></div></div>";
 				}
 			}
-			fText += "<div class='item-title'>" + DRIVE_FILES[i].title + "</div>";
+			
 
 			//button actions
 			fText += "<div class='button-box'>";
@@ -407,8 +409,8 @@ function initDriveButtons(){
     });
 	
 	//Initiate the click folder browse icon
-	$(".folder-icon").unbind("click");
-    $(".folder-icon").click(function () {
+	$(".folder-title").unbind("click");
+    $(".folder-title").click(function () {
         browseFolder($(this));
     });
 
