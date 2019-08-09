@@ -70,7 +70,7 @@ body{
     float:left;
     font-family:Arial;
     width: inherit;
-    height:15px;
+    height:1em;
     text-align:center;
     -webkit-box-shadow: 7px 9px 5px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 9px 5px -6px rgba(0,0,0,0.75);
