@@ -69,12 +69,9 @@ body{
 .folder-box, .file-box {
     float:left;
     font-family:Arial;
-    width:150px;
-    height:150px;
+    width: inherit
+    height:15px;
     text-align:center;
-    padding:10px;
-    margin:10px;
-    border:solid 1px #edeae9;
     -webkit-box-shadow: 7px 9px 5px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 9px 5px -6px rgba(0,0,0,0.75);
     box-shadow: 7px 9px 5px -6px rgba(0,0,0,0.75);
