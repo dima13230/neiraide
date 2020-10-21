@@ -41,7 +41,7 @@ function runit()
     output.innerHTML = '';
 	Sk.pre = "output";
 	
-    Sk.configure({output:outf, read:builtinRead});
+    Sk.configure({output:outf, read:builtinRead, __future__: Sk.python3});
 	
 	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
 	
