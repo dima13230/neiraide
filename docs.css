@@ -261,6 +261,7 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   display: block;
+  height:25px;
 }
 
 .nav-toggle {
