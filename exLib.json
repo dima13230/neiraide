@@ -2,6 +2,14 @@
   
   "shapes.py": {
     "path": "./pylib/shapes.py"
-  }
+  },
+
+  "numpy": {
+    "path": "./pylib/numpy"
+  },
   
+  "numpy.random": {
+    "path": "./pylib/numpy/random"
+  }
+
 }
