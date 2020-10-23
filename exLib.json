@@ -5,11 +5,11 @@
   },
 
   "numpy.py": {
-    "path": "./pylib/numpy"
+    "path": "./pylib/numpy/__init__.js"
   },
   
   "numpy.random.py": {
-    "path": "./pylib/numpy/random"
+    "path": "./pylib/numpy/random/__init__.js"
   }
 
 }
