@@ -30,12 +30,13 @@ function builtinRead(x) {
 			}
 		}
 	}
-    console.log(Sk.builtinFiles["files"]);
     return Sk.builtinFiles["files"][x];
 }
 
 function runit()
 {
+    if (detectmob())
+        togglenav();
     var prog = editor.getValue();
     var output = document.getElementById("output");
     output.innerHTML = '';
