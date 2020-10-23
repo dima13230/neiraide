@@ -261,7 +261,13 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   display: block;
-  height:25px;
+  height:40px;
+}
+
+.outarea {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(26,26,26);
 }
 
 .nav-toggle {
