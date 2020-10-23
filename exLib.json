@@ -4,11 +4,11 @@
     "path": "./pylib/shapes.py"
   },
 
-  "numpy": {
+  "numpy.py": {
     "path": "./pylib/numpy"
   },
   
-  "numpy.random": {
+  "numpy.random.py": {
     "path": "./pylib/numpy/random"
   }
 
