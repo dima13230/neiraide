@@ -30,7 +30,7 @@ function builtinRead(x) {
 			}
 		}
 	}
-    console.log(Sk.builtinFiles["files"];
+    console.log(Sk.builtinFiles["files"]);
     return Sk.builtinFiles["files"][x];
 }
 
