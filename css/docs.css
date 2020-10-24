@@ -261,15 +261,15 @@ strong {
   cursor: pointer;
   border-radius: 5px;
   display: block;
+  width: 100%;
   height:36px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  vertical-align: middle;
+  transform: translateY(50%);
 }
 
 .outarea {
