@@ -42,8 +42,8 @@
 
 		<div id=buttons style="height:fit-content;">
 			<ul>
-				<li><a class="btn" onclick="new_f()"><i class="fa fa-file-code-o"></i> New</a>
-				<li><a class="btn" onclick="runit()"><i class="fa fa-play"></i> Run</a>
+				<!--<li><a class="btn" onclick="new_f()"><i class="fa fa-file-code-o"></i> New</a>-->
+				<!--<li><a class="btn" onclick="runit()"><i class="fa fa-play"></i> Run</a>-->
 			</ul>
 		</div>
 
@@ -77,13 +77,16 @@
 	<form><textarea class="code" id="code" name="code">print("Hello, world!")</textarea></form>
 
 	<div class="tab">
+		<button class="tablinks" onclick="new_f()">New</button>
+		<button class="tablinks" onclick="runit()">Run</button>
+		<label class="tabseparator">|</label>
 		<button class="tablinks" onclick="openResultsTab(event, 'Output')">Output</button>
 		<button class="tablinks" onclick="openResultsTab(event, 'Canvas')">Canvas</button>
 	</div>
 
 	<textarea class="outarea" id="Output" disabled></textarea>
 	<div class="canvas" id="Canvas"></div>
-	
+
 	</article>
 
 	<script src="src/neira/skulpt.js"></script>

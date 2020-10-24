@@ -301,6 +301,7 @@ strong {
 
 .nav-toggle {
   display: none;
+  width: 5px;
 }
 
 .hide {
@@ -365,4 +366,9 @@ strong {
 
 .tab button.active {
   background-color: #ccc;
+}
+
+.tabseparator {
+  float: left;
+  padding: 14px 16px;
 }
