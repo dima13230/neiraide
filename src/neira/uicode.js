@@ -12,7 +12,8 @@ editor.setSize(null, 400);
 
 
 function new_f() {
-	editor.setValue("");
+  editor.setValue("");
+  document.activeElement.blur();
 }
 
 var navtoggle = $('.nav-toggle');

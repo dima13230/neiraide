@@ -35,8 +35,11 @@ function builtinRead(x) {
 
 function runit()
 {
-    if (detectmob())
-        togglenav();
+	if (detectmob())
+	{
+		togglenav();
+		document.activeElement.blur();
+	}
     var prog = editor.getValue();
     var output = document.getElementById("output");
     output.innerHTML = '';
