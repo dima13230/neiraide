@@ -1,17 +1,24 @@
+var getJSON = require('get-json')
+
 // Load external libraries
 var exLibsOk = false;
-
 var exLibs;
-$.getJSON("./exLib.json", function(json) {
-	exLibs = json;
-	exLibsOk = true;
+getJSON("./exLib.json", function(error, json) {
+	if(error != null){
+		exLibs = json;
+		exLibsOk = true;
+	}
+	else
+	{
+		console.error(error);
+	}
 });
 
 function outf(text)
 {
-    var output = document.getElementById("output");
+    var output = document.getElementById("Output");
     text = text.replace(/</g, '&lt;');
-    output.innerHTML = output.innerHTML + text;
+    output.value = output.value + text;
 }
 
 function builtinRead(x) {
@@ -38,24 +45,24 @@ function runit()
 	if (detectmob())
 	{
 		togglenav();
-		document.activeElement.blur();
+		document.activeElement = null;
 	}
     var prog = editor.getValue();
-    var output = document.getElementById("output");
-    output.innerHTML = '';
-	Sk.pre = "output";
+    var output = document.getElementById("Output");
+    output.value = '';
+	Sk.pre = "Output";
 	
     Sk.configure({output:outf, read:builtinRead, __future__: Sk.python3});
 	
-	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'canvas';
+	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'Canvas';
 	
     var myPromise = Sk.misceval.asyncToPromise(function() {
        return Sk.importMainWithBody("<stdin>", false, prog, true);
 	});
 	myPromise.then(function(mod) {
-       console.log('success');
+       console.log('Script executed successfully');
 	},
     function(err) {
-       output.innerHTML = err.toString();
+       output.value = err.toString();
    });
 }

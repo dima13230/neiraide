@@ -72,12 +72,18 @@
 		</div>
 	</div>
 
-	<article>
+	<article class="fillheight">
 	<div id="nav-toggle" class="nav-toggle"><span></span></div>
-	<form><textarea id="code" name="code">print("Hello, world!")</textarea></form>
+	<form><textarea class="code" id="code" name="code">print("Hello, world!")</textarea></form>
 
-	<div id="canvas" height="500" width="500"></div>
-	<pre class="outarea" id="output"></pre>
+	<div class="tab">
+		<button class="tablinks" onclick="openResultsTab(event, 'Output')">Output</button>
+		<button class="tablinks" onclick="openResultsTab(event, 'Canvas')">Canvas</button>
+	</div>
+
+	<textarea class="outarea" id="Output" disabled></textarea>
+	<div class="canvas" id="Canvas"></div>
+	
 	</article>
 
 	<script src="src/neira/skulpt.js"></script>
