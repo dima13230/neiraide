@@ -51,7 +51,7 @@ em {
 }
 
 article {
-  margin-left: 210px;
+  /*margin-left: 210px;*/
   background: white;
   z-index: 2;
   position: relative;
